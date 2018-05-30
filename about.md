@@ -8,7 +8,7 @@ permalink: /about/
 
 ### More Information
 
-트럼피아 근무 - www.trumpia.com / www.trumpia.co.kr
+트럼피아 근무 - <www.trumpia.com> / <www.trumpia.co.kr>
 
 ### Contact me
 
