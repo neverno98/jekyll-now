@@ -1,0 +1,47 @@
+---
+layout: post
+title: DevOps Talk - 5월
+---
+
+1. 참석 이유
+  * DevOps 에 대한 궁금증.. ( docker 인가?? )
+  * 외쿡 형이 오신데.. 
+  * 근처인데 무료야.. ( 대박 )
+  * Ralf Yang 님이 궁금함..
+
+2. DevOps 촛점 맞추기 - Ralf Yang
+  * 모호하다.
+  * Dev 쪽에 치중 되는 경향.
+  * 외국에서는 문화라고 한다. - 롤이나 팀이 되면 안된다고 한다 - 하지만 모두가 다 한다면 아무도 안하는 것이다.
+  * 구글에서는 SRE
+  * Immutable 인프라 와 결합하여 배포 - CI/CD   
+  * vagrant / 피닉스 서버 패턴
+    
+3. Pivotal의 수석 디렉터 Michael Cote
+  * Pivatal은 스프링 등 오픈소스로 유명
+  * DevOps 는 도구가 아니라 그것을 하면서 얻는 것들.
+  * 스몰배치를 통해서 빠른 피드백을 얻고 그것을 통해서 배우고 발전해 나가는 것이 중요 - 5일 안에 배포
+    * 빌드파이프라인 
+    * 돈되는 것 중에 리스크가 적은 것
+    * 스폰서 쉽을 잘 받기 쉬움    
+  * 넷플릭스에서는 풀 사이클 디벨로퍼가 중요하다고 함.
+  * 다운 타임 없는 릴리즈를 1~2 일 정도에 하면 잘하고 있는 것 
+    
+4. 느낀점.    
+  * 구글캠퍼스 코리아 좋다. - 당연한가
+  * Ralf Yang 님은 유머러스 하고 발표를 잘한다 - 페북인지~ 실제인지~
+  * DevOps 가 잘안되는 것에서 '우리' 를 느꼈다.
+     * 5일 안에 배포를 하려면 우선 테스트가 자동화 되어야 한다. - 이야기는 없었지만 당연히
+     * 구성원 간에 믿음도 중요 할 것이다.     
+     * Cloud 면 좋겠지만 아니더라도 자원이 어느정도 충분해야 한다.     
+     * 자동화된 도구를 쓸 수 있도록 시간이 지원해 주어야 한다.     
+     * 이것도 저것도 다 잘 해야 한다고 하면 시행이 잘 안된다.
+        
+* 참조
+
+   * [:: Not a DevOps talk / Creating better software ::]
+     > https://www.facebook.com/groups/TeAnE/permalink/1200290290106680/
+    
+   * DevOps 촛점 맞추기 자료
+     > https://lookaside.fbsbx.com/file/5%3A29-DevOps%20%E1%84%8E%E1%85%A9%E1%86%BA%E1%84%8C%E1%85%A5%E1%86%B7%E1%84%86%E1%85%A1%E1%86%BD%E1%84%8E%E1%85%AE%E1%84%80%E1%85%B5.pdf?token=AWyocrWUVDzpE6SMoIzSPHz3f8WbhgtlTZ0S6X6jxsLz7ljHkTdcdWP9J7rlHNlwwLSQ0pvh9Ha2vmxQVteAFLYHzFrCIvbAAGraFyZBBm8xu9g5L8TPOuiEJ-iUpA4phpWohdNw4zgalV66H1GXOC2O4UuJxPM2wEkGqExlSigHwiYaBaenq7ffyGnjRwdKV6bikC5jkB27k4oCXMWEB0FOY2yx_z-k-Kmc4OgpRk-y4A
+     
