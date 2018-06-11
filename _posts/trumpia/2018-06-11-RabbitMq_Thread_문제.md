@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RabbitMq Instance 문제
+title: RabbitMq Thread Instance 침범 문제
 ---
 
 ### RabbitMq 를 이용하여 비동기 이벤트 처리를 할 때, 발생했던 문제 해결 과정을 공유한다.  
