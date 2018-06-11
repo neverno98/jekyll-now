@@ -32,7 +32,7 @@ title: RabbitMq Instance 문제
      <pre><code> private SmsSendFacade smsSendFacade = new SmsSendFacade();
      public void handleDelivery(Channel channel, Envelope envelope, AMQP.BasicProperties properties, byte[] body) {
        
-       *smsSendFacade.send(body);*
+       smsSendFacade.send(body);
      }
     }</code></pre>        
   
@@ -40,5 +40,5 @@ title: RabbitMq Instance 문제
 * Thread 간에 간섭이 일어나서 Instance 에 문제가 생기는 것이기 때문에 facade 에서 처리할 때, 서로 간섭하지 않도록 처리 하였다.
      <pre><code> public void handleDelivery(Channel channel, Envelope envelope, AMQP.BasicProperties properties, byte[] body) {
        
-       *new SmsSendFacade().send(body);*
+       new SmsSendFacade().send(body);
    }</code></pre>        
