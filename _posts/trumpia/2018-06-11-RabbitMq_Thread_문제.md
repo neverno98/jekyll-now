@@ -14,6 +14,7 @@ title: RabbitMq Thread Instance 침범 문제
     
 #### 원인
   * RabbitMq 는 Consumer 에서 Handler 발식으로 메시지를 발송한다.
+  
      <pre><code>consumer = new DefaultConsumer(channel) {
 
         @Override
@@ -28,6 +29,7 @@ title: RabbitMq Thread Instance 침범 문제
     };</code></pre>
 
   * 이를 Handler 에서 연결하여 처리 하도록 해두었다.
+
      <pre><code>public interface MqHandler {
         
         void handleDelivery(
@@ -38,6 +40,7 @@ title: RabbitMq Thread Instance 침범 문제
     }</code></pre>     
 
   * 처리량이 많을 경우 Thread 를 생성해서 보내주게 되는데 처리를 할때 같은 객체에서 처리를 할 경우에, 하나의 Thread 가 멈추고 나중에 들어온 메시지가 처리 될 경우에 인스턴스에 멤버를 새로이 넣어서 문제가 발생하는 경우가 있었다.
+
      <pre><code>private SmsSendFacade smsSendFacade = new SmsSendFacade();
     public void handleDelivery(
         Channel channel, 
@@ -50,6 +53,7 @@ title: RabbitMq Thread Instance 침범 문제
   
 #### 개선 
 * Thread 간에 간섭이 일어나서 Instance 에 문제가 생기는 것이기 때문에 facade 에서 처리할 때, 서로 간섭하지 않도록 처리 하였다.
+
      <pre><code>public void handleDelivery(
       Channel channel, 
       Envelope envelope, 
