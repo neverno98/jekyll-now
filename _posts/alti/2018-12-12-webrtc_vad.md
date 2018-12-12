@@ -33,8 +33,7 @@ title: cloudhopper ssl option
 
 ### 하지만 인텔리제이 에서는 정상적으로 동작하던 내용이 스프링부트를 jar 로 만들고, 이를 도커로 만들어서 동작시켜 보니 so native file 을 로딩을 못하여 계속 에러가 발생하였다.
 
-![native_file_error](./2018-12-12-native_load_failed.png)
-    
+   
 ### 검색을 좀 해보니 jar 파일 내부에 so 파일을 갖고 있어도 이를 압축을 풀고 사용할 수 있도록 하는것은 지원할 생각이 없다고 되어 있다. - 문제는 알고 있지만, 다른 바쁜일도 많고 하니 이전과 같은 방식으로 사용하라고 되어 있었다.-Djava.library.path= 를 설정하여 열심히 테스트 해봤지만 진행이 안되서, 고민 하고 검색해보니 -Djna.library.path= 도 있어서 사용해보니 jna 로 사용하는 패스는 사용이 되어 docker 로 파일 복사를 진행하여, 참조할 수 있도록 진행하니, 잘된다.
 
 ### Dockerfile so 파일 복사
